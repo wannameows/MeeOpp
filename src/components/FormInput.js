@@ -9,6 +9,8 @@ export default function FormInput({ value, label, onChange }) {
         <Input
           value={value}
           onChangeText={(text) => onChange(label, text)}
+          underlineColorAndroid="rgba(255, 255, 255, 0)"
+          selectionColor="#303030"
         />
       </InputWrapper>
     </Wrapper>

@@ -10,9 +10,6 @@ import {
   connect
 } from 'react-redux';
 import styled from 'styled-components';
-import {
-  KeyboardAwareScrollView
-} from 'react-native-keyboard-aware-scroll-view';
 
 import {
   saveFormInfo,
@@ -107,10 +104,11 @@ const Wrapper = styled.View`
   flex-direction: column;
   padding: 10px;
 `;
-const ShadowWrapper = styled(KeyboardAwareScrollView)`
+const ShadowWrapper = styled(Wrapper)`
   padding: 10px;
   background: #fff;
   box-shadow: 0px 0px 5px #303030;
   shadow-opacity: 0.5;
-  width: 100%;
+  justify-content: center;
+  align-items: center;
 `;
