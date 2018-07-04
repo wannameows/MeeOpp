@@ -1,19 +1,19 @@
 import React from 'react';
 import styled from 'styled-components';
 
-export default ({ value, label, onChange }) => (
-  <Wrapper>
-    <Label>{label}</Label>
-    <InputWrapper>
-      <Input
-        value={value}
-        onChangeText={(text) => onChange(label, text)}
-        underlineColorAndroid="rgba(255, 255, 255, 0)"
-        selectionColor="#303030"
-      />
-    </InputWrapper>
-  </Wrapper>
-);
+export default function FormInput({ value, label, onChange }) {
+  return (
+    <Wrapper>
+      <Label>{label}</Label>
+      <InputWrapper>
+        <Input
+          value={value}
+          onChangeText={(text) => onChange(label, text)}
+        />
+      </InputWrapper>
+    </Wrapper>
+  );
+};
 
 const Wrapper = styled.View`
   flex-direction: row;

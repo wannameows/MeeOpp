@@ -40,7 +40,10 @@ export default ( state = initialState, action = {
       return {
         ...state,
         getFetch: false,
-        fields: { ...action.payload }
+        fields: {
+          ...state.fields,
+          ...action.payload
+        }
       };
     case types.GET_FORM_INFO_ERROR:
       return {
